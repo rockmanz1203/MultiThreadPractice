@@ -3,6 +3,7 @@
 #include <ctime>
 #include <mutex>
 #include <vector>
+#include <conio.h>
 
 #define SIZE 15
 
@@ -142,7 +143,7 @@ void KeyListener() {
 	while (stopflag != true)
 	{
 		//cin >> commandKey;
-		commandKey = getchar();
+		commandKey = _getch();
 		if (commandKey == 's') 
 		{
 			stopflag = true;
@@ -164,7 +165,8 @@ void KeyListener() {
 			cout << "加入一個ball" << endl;
 			
 			
-			/*
+			
+		/*
 			//測試選項 加入1000顆球做壓力測試
 			for (int i = 0; i < 1000; i++) 
 			{
@@ -172,7 +174,7 @@ void KeyListener() {
 				//Ball ball;
 				BallVector.push_back(ball);
 			}
-			*/
+		*/
 			Ball* ball = new Ball();
 			//Ball ball;
 			BallVector.push_back(ball);
